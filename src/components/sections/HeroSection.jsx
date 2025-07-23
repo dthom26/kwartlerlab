@@ -3,7 +3,7 @@ const HeroSection = () => {
   return (
     <section id="hero-section-container">
       <div>
-        <img src="/images/lab/Group.svg" alt="Kwartler Logo" />
+        <img src="images/lab/bigLogo.svg" alt="Kwartler Logo" />
       </div>
       <div>
         <p>

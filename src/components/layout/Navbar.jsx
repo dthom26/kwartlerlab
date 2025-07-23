@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="/images/smallLabLogo.png" alt="Lab Logo" />
+        <img src="images/smallLabLogo.png" alt="Lab Logo" />
       </div>
       <button
         className="navbar-toggle"
@@ -21,16 +21,27 @@ const Navbar = () => {
       </button>
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <a href="#hero-section-container" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="#hero-section-container" onClick={() => setMenuOpen(false)}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="#about-pi-section" onClick={() => setMenuOpen(false)}>Faculty Bio</a>
+          <a href="#about-pi-section" onClick={() => setMenuOpen(false)}>
+            Faculty Bio
+          </a>
         </li>
         <li>
-          <a href="#team-section-container" onClick={() => setMenuOpen(false)}>Group Members</a>
+          <a href="#team-section-container" onClick={() => setMenuOpen(false)}>
+            Group Members
+          </a>
         </li>
         <li>
-          <a href="#recent-publications-section" onClick={() => setMenuOpen(false)}>Publications</a>
+          <a
+            href="#recent-publications-section"
+            onClick={() => setMenuOpen(false)}
+          >
+            Publications
+          </a>
         </li>
       </ul>
     </nav>
