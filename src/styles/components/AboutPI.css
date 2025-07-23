@@ -1,0 +1,155 @@
+#pi-photo-container {
+    width: 100%;
+    max-width: 300px;
+    /* maximum size on large screens */
+    aspect-ratio: 2/3;
+    /* keeps the oval shape */
+    min-width: 200px;
+    min-height: 260px;
+    height: auto;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#pi-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30%;
+    display: block;
+    transition: border-radius 0.4s, width 0.4s, height 0.4s;
+}
+
+@media (max-width: 800px) {
+    #pi-photo-container {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    #pi-photo-container {
+        max-width: 220px;
+    }
+}
+
+
+
+@media (max-width: 700px) {
+    .about-pi-section-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem 0;
+        padding: 1rem 0.5rem;
+    }
+
+    #pi-photo-container {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0 auto;
+    }
+
+    .about-pi-text {
+        grid-column: 1;
+        grid-row: 2;
+        max-width: 100%;
+    }
+
+    .about-pi-bio-container {
+        max-width: 100%;
+    }
+
+    .title-email-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .title-email-row h3,
+    .title-email-row .pi-email {
+        width: 100%;
+        word-break: break-all;
+        overflow-wrap: anywhere;
+    }
+}
+
+.about-pi-section-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem 4rem;
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.about-pi-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+
+}
+
+.title-email-row {
+    display: flex;
+    align-items: center;
+
+}
+
+.about-pi-text h2,
+.about-pi-text .about-pi-bio {
+    margin: 0;
+    width: 100%;
+}
+
+.about-pi-text .pi-email,
+.about-pi-text h3 {
+    margin: 0;
+}
+
+.about-pi-text .about-pi-bio {
+    margin-top: 0.5rem;
+}
+
+.about-pi-bio {
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+
+}
+
+.title-email-row {
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+}
+
+.title-email-row h3 {
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+.title-email-row .pi-email {
+    font-size: 1.2rem;
+    color: #003b3a;
+    /* dark teal for contrast */
+    font-weight: 600;
+}
+
+.about-pi-text h2 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.about-pi-bio-container {
+    max-width: 38rem;
+    /* or 600px, or 60% */
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+#hero-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero-section-container img {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    max-width: 800px;
+    /* or whatever size fits your design */
+    width: 100%;
+    height: auto;
+}
+
+#hero-section-container p {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    padding: 0 1.5rem;
+}

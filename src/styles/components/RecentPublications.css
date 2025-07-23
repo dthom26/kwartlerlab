@@ -1,0 +1,97 @@
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns on large screens */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows */
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .publications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablets */
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .publications-grid {
+        grid-template-columns: 1fr;
+        /* 1 column on mobile */
+        grid-template-rows: auto;
+    }
+}
+
+.publications-grid li {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    min-width: 0;
+    min-height: 120px;
+    /* prevents cards from getting too small */
+}
+
+.card-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image-publication {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+
+.card-image-container {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-image-container:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.card-image-container:hover .card-image-publication {
+    filter: brightness(0.7);
+}
+
+.card-image-container:hover .card-title-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    /* Make overlay more opaque */
+    color: #ffd700;
+    /* Optional: change text color on hover */
+    transition: background 0.2s, color 0.2s;
+}
+
+.card-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* semi-transparent black */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    border-radius: 0 0 8px 8px;
+    text-decoration: none;
+}
+
+
+
+#recent-publications-section {
+    margin-bottom: 5rem;
+    margin-top: 8rem;
+
+}

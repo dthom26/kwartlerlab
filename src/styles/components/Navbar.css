@@ -1,0 +1,78 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 1.02rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 116, 217, 0.92);
+        /* semi-transparent accent blue */
+        /* semi-transparent version of #88c5c1 */
+        /* You can adjust the alpha (last value) for more/less transparency */
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 0 0 8px 8px;
+        z-index: 100;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(2px);
+    }
+
+    .navbar-links a {
+        color: #003b3a;
+        /* dark teal for contrast */
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.5rem 0;
+        transition: color 0.2s;
+    }
+
+    .navbar-links a:hover {
+        color: #0074D9;
+        /* accent blue on hover */
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
