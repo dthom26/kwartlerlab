@@ -5,7 +5,7 @@ export const AboutPI = () => {
       <div id="pi-photo-container">
         <img
           id="pi-photo"
-          src="/images/team/image.png"
+          src="images/team/image.png"
           alt="Principal Investigator"
         />
       </div>

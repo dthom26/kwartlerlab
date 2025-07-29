@@ -21,3 +21,12 @@
     line-height: 1.5;
     padding: 0 1.5rem;
 }
+
+@media (max-width: 600px) {
+    #hero-section-container p {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        padding: 0 0.5rem;
+        max-width: 95vw;
+    }
+}

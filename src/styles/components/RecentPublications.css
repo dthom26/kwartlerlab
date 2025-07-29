@@ -47,6 +47,10 @@
     object-fit: cover;
     border-radius: 8px;
     display: block;
+
+    min-height: 400px;
+
+
 }
 
 
@@ -90,7 +94,7 @@
 
 
 
-#recent-publications-section {
+.recent-publications-section {
     margin-bottom: 5rem;
     margin-top: 8rem;
 

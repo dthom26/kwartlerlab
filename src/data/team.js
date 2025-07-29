@@ -47,4 +47,16 @@ export const teamMembers = [
     position: "PhD Student",
     email: "yan.zhang.1@uth.tmc.edu",
   },
+  {
+    name: "Aminat",
+    image: "images/team/Aminat.jpg",
+    position: "",
+    email: "",
+  },
+  {
+    name: "Shuvra",
+    image: "images/team/Aminat.jpg",
+    position: "",
+    email: "",
+  },
 ];
