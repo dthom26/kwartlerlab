@@ -1,20 +1,5 @@
 export const publications = [
   {
-    title: "Publication Title 1",
-    link: "#",
-    image: "images/publications/alpha actin abcepta.jpg",
-  },
-  {
-    title: "Publication Title 2",
-    link: "#",
-    image: "images/publications/alpha smooth muscle actin prtoeintech.png",
-  },
-  {
-    title: "Publication Title 3",
-    link: "#",
-    image: "images//publications/atpase.jpg",
-  },
-  {
     title:
       "Inducing hypertension in Myh11 R247C/R247C mice triggers aortic dissections with increased focal adhesion kinase signaling",
     link: "https://pubmed.ncbi.nlm.nih.gov/40027514/",
@@ -25,11 +10,7 @@ export const publications = [
     link: "https://pubmed.ncbi.nlm.nih.gov/40330847/",
     image: "images/publications/measuremnt of oxygen consumption.jpg",
   },
-  {
-    title: "Publication Title 6",
-    link: "#",
-    image: "images/publications/Moyamoya_disease-MRI_T1.png",
-  },
+
   {
     title:
       "Immature Acta2R179C/+ smooth muscle cells cause moyamoya-like cerebrovascular lesions in mice prevented by boosting OXPHOS",

@@ -55,7 +55,7 @@ export const teamMembers = [
   },
   {
     name: "Shuvra",
-    image: "images/team/Aminat.jpg",
+    image: "images/team/Shuvra.jpg",
     position: "",
     email: "",
   },

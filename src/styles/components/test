@@ -1,0 +1,291 @@
+/* Current Projects Section - Clean Modern Design */
+.current-projects-section {
+    margin: 4rem 0;
+    padding: 0 1rem;
+    overflow: hidden;
+    /* Prevent any overflow from creating scrollbars */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #333;
+}
+
+/* Optimized Flexbox container for smooth in-place expansion */
+.projects-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Keep all cards on same row */
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+    /* Ensure all cards have same height */
+    justify-content: center;
+    /* Center the cards */
+}
+
+/* Individual project cards with optimized flex properties */
+.projects-grid li {
+    list-style: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: flex-grow, flex-shrink;
+    /* More specific will-change for better performance */
+    flex: 1 1 250px;
+    /* flex-grow: 1, flex-shrink: 1, flex-basis: 250px */
+    min-width: 200px;
+    /* Slightly larger min-width for better proportions */
+    max-width: 400px;
+    /* Prevent cards from getting too wide */
+}
+
+/* Optimized expanded state - smoother expansion */
+.projects-grid li.expanded {
+    flex: 2.5 1 400px;
+    /* More space (2.5x) with larger basis for smoother expansion */
+    max-width: 600px;
+    /* Allow expanded cards to be wider */
+}
+
+/* Card container with modern styling */
+.project-card-container {
+    position: relative;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Enhanced styling when expanded */
+.projects-grid li.expanded .project-card-container {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform: none;
+    /* Remove any transforms that could cause overflow */
+    z-index: 10;
+    /* Ensure expanded card appears above others */
+}
+
+/* Card image with smooth transitions */
+.project-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+/* Title overlay for normal (non-expanded) cards */
+.project-card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide title when card is expanded (summary will show instead) */
+.projects-grid li.expanded .project-card-title {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Darken image when expanded for better text readability */
+.projects-grid li.expanded .project-card-image {
+    filter: brightness(0.6) contrast(1.1);
+}
+
+/* Summary overlay - hidden by default */
+.project-summary {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.7) 50%,
+            transparent 100%);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Show summary when expanded */
+.projects-grid li.expanded .project-summary {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-summary p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+}
+
+/* Responsive Design */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .projects-grid {
+        gap: 1.25rem;
+        max-width: 900px;
+        /* Reduce max-width for better fit */
+    }
+
+    .projects-grid li {
+        flex: 1 1 200px;
+        /* Adjust flex-basis for tablets */
+        min-width: 180px;
+        max-width: 350px;
+    }
+
+    .projects-grid li.expanded {
+        flex: 2.2 1 320px;
+        /* Slightly less expansion on tablets */
+        max-width: 500px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .projects-grid {
+        gap: 1rem;
+        max-width: 700px;
+    }
+
+    .projects-grid li {
+        flex: 1 1 180px;
+        min-width: 160px;
+        max-width: 300px;
+    }
+
+    .projects-grid li.expanded {
+        flex: 2 1 280px;
+        max-width: 420px;
+    }
+
+    .project-card-container {
+        height: 250px;
+    }
+}
+
+/* Mobile phones - switch to vertical stacking */
+@media (max-width: 600px) {
+    .current-projects-section {
+        margin: 2rem 0;
+        padding: 0 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        /* Stack vertically on mobile */
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+
+    .projects-grid li {
+        flex: none;
+        /* Reset flex on mobile */
+        min-width: unset;
+    }
+
+    .projects-grid li.expanded {
+        flex: none;
+        /* Reset flex on mobile */
+        transform: none;
+    }
+
+    .project-card-container {
+        height: 200px;
+    }
+
+    .projects-grid li.expanded .project-card-container {
+        height: auto;
+        /* Dynamic height */
+        min-height: 280px;
+        /* Minimum height */
+        max-height: 70vh;
+        /* Slightly less than full screen */
+    }
+
+    /* Optimized mobile summary - no scroll, better text fitting */
+    .project-summary {
+        padding: 1rem 0.75rem 0.75rem;
+        /* Reduced padding for better space utilization */
+        overflow-y: visible;
+        /* No scrolling - show all content */
+        background: linear-gradient(to top,
+                rgba(0, 0, 0, 0.95) 0%,
+                rgba(0, 0, 0, 0.85) 60%,
+                transparent 100%);
+        /* Stronger background for better text contrast */
+    }
+
+    .project-summary p {
+        font-size: 0.85rem;
+        /* Slightly smaller for better fitting */
+        line-height: 1.4;
+        /* Tighter line height for mobile */
+        margin-bottom: 0.4rem;
+        /* Reduced margin */
+        word-wrap: break-word;
+        /* Ensure long words break properly */
+        hyphens: auto;
+        /* Enable hyphenation for better text wrapping */
+    }
+
+    .project-card-title {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+
+    .projects-grid li,
+    .project-card-container,
+    .project-card-image,
+    .project-summary {
+        transition: none;
+    }
+}
+
+/* Focus states for keyboard navigation */
+.project-card-container:focus {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+.project-card-container:focus:not(:focus-visible) {
+    outline: none;
+}

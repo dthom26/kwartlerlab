@@ -2,8 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* 4 columns on large screens */
-    grid-template-rows: repeat(2, 1fr);
-    /* 2 rows */
+    grid-template-rows: auto;
     gap: 1rem;
 }
 
@@ -94,7 +93,7 @@
 
 
 
-.recent-publications-section {
+#recent-publications-section {
     margin-bottom: 5rem;
     margin-top: 8rem;
 
