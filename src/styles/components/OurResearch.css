@@ -1,0 +1,115 @@
+/* Mobile-first approach with fluid typography */
+
+.image-text-section {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 4vw, 2.5rem);
+    /* Fluid gap that scales */
+    margin: 0 auto;
+    padding: clamp(1rem, 3vw, 3rem);
+    /* Fluid padding */
+    max-width: 1200px;
+}
+
+.image-text-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    max-height: clamp(250px, 40vh, 450px);
+    /* Scales with viewport height */
+}
+
+.image-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Fluid typography that scales smoothly */
+.image-text-content p {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    line-height: clamp(2, 1.8 + 1vw, 2.5);
+
+    /* font-size: clamp(1.2rem, 2.5vw, 1.5rem); */
+    /* Scales from 1rem to 1.25rem */
+    /* line-height: clamp(1.7, 1.5 + 0.8vw, 2.2); */
+    /* Dynamic line-height */
+    margin: 0;
+    color: #333;
+    max-width: 65ch;
+    /* Optimal reading width */
+    hyphens: auto;
+    /* Better text wrapping */
+    word-wrap: break-word;
+}
+
+.section-text {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    /* Fluid scaling */
+
+    line-height: clamp(1.5, 1.4 + 0.5vw, 1.8);
+    padding: clamp(1rem, 3vw, 3rem);
+    margin: 0 auto;
+    max-width: 1200px;
+    color: #333;
+    max-width: 100ch;
+    /* Readable line length */
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+/* Tablet - side by side layout */
+@media (min-width: 768px) {
+    .image-text-section {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .image-text-image {
+        flex: 0 0 45%;
+        /* Take up 45% of width, don't grow/shrink */
+    }
+
+    .image-text-content {
+        flex: 1;
+        /* Take remaining space */
+        padding-left: clamp(1rem, 2vw, 2rem);
+        /* Add some spacing from image */
+    }
+
+    /* Remove max-width constraint in side-by-side layout */
+    .image-text-content p {
+        max-width: none;
+    }
+}
+
+/* Container queries for even better responsiveness (modern browsers) */
+@container (min-width: 600px) {
+    .image-text-content p {
+        font-size: clamp(1.1rem, 2vw, 1.3rem);
+    }
+}
+
+/* Smooth transitions for resize events */
+.image-text-content p,
+.section-text {
+    transition: font-size 0.2s ease, line-height 0.2s ease;
+}
+
+
+
+/* Print styles */
+@media print {
+    .image-text-section {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .image-text-content p,
+    .section-text {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+}

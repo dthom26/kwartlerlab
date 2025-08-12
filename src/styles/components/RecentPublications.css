@@ -1,100 +1,178 @@
-.publications-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columns on large screens */
-    grid-template-rows: auto;
-    gap: 1rem;
-}
-
-@media (max-width: 1024px) {
-    .publications-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on tablets */
-        grid-template-rows: auto;
-    }
-}
-
-@media (max-width: 600px) {
-    .publications-grid {
-        grid-template-columns: 1fr;
-        /* 1 column on mobile */
-        grid-template-rows: auto;
-    }
-}
-
-.publications-grid li {
-    height: 100%;
-    width: 100%;
+.publications-container {
     display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 30px;
+    row-gap: 30px;
+}
+
+.publication-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
     align-items: stretch;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     min-width: 0;
-    min-height: 120px;
-    /* prevents cards from getting too small */
+    overflow: hidden;
+}
+
+.publications-container li:last-child {
+    margin-bottom: 100px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: flex-start;
 }
 
 .card-image-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    flex: 0 0 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 6px;
+    min-width: 0;
 }
 
 .card-image-publication {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    display: block;
-
-    min-height: 400px;
-
-
 }
 
-
-.card-image-container {
-    transition: transform 0.2s, box-shadow 0.2s;
+.card-text {
+    font-size: 1.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.card-image-container:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+.card-title {
+    margin: 0 0 20px 0;
+    font-size: 1.4rem;
+    line-height: 1.3;
 }
 
-.card-image-container:hover .card-image-publication {
-    filter: brightness(0.7);
-}
-
-.card-image-container:hover .card-title-overlay {
-    background: rgba(0, 0, 0, 0.8);
-    /* Make overlay more opaque */
-    color: #ffd700;
-    /* Optional: change text color on hover */
-    transition: background 0.2s, color 0.2s;
-}
-
-.card-title-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    /* semi-transparent black */
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    font-weight: bold;
+.card-summary {
     font-size: 1.1rem;
-    box-sizing: border-box;
-    border-radius: 0 0 8px 8px;
-    text-decoration: none;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+    flex: 1;
 }
 
+.card-button {
+    margin-top: 20px;
+    align-self: center;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
 
+.card-button:hover {
+    background-color: #e0e0e0;
+}
 
-#recent-publications-section {
-    margin-bottom: 5rem;
-    margin-top: 8rem;
+/* Tablet breakpoint */
+@media (max-width: 1050px) {
+    .card-content {
+        flex-direction: column;
+        row-gap: 20px;
+    }
 
+    .card-image-container {
+        flex: none;
+        width: 100%;
+        min-height: 200px;
+    }
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+    .publications-container {
+        max-width: 95%;
+        /* More space on mobile */
+        padding: 0 15px;
+        /* Less padding */
+        row-gap: 20px;
+        /* Tighter spacing */
+    }
+
+    .publication-card {
+        padding: 15px 20px;
+        /* Less padding */
+    }
+
+    .card-image-container {
+        height: 180px;
+        /* Shorter images save space */
+    }
+
+    .card-text {
+        font-size: 1.1rem;
+        /* Slightly smaller */
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        /* Smaller titles */
+        margin-bottom: 15px;
+    }
+
+    .card-summary {
+        font-size: 1rem;
+        /* Smaller text */
+        line-height: 1.6;
+        /* Tighter line height */
+    }
+
+    .card-button {
+        padding: 12px 20px;
+        /* Bigger touch target */
+        font-size: 1rem;
+        /* Easier to read */
+        align-self: stretch;
+        /* Full width button */
+        text-align: center;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+    .publications-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .publication-card {
+        padding: 12px 15px;
+    }
+
+    .card-image-container {
+        height: 160px;
+        /* Even shorter */
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-summary {
+        font-size: 0.95rem;
+    }
+
+    .publications-container li:last-child {
+        margin-bottom: 50px;
+        /* Less bottom space */
+    }
 }

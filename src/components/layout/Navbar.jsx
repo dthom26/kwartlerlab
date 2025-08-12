@@ -26,13 +26,11 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#about-pi-section" onClick={() => setMenuOpen(false)}>
-            Faculty Bio
-          </a>
-        </li>
-        <li>
-          <a href="#team-section-container" onClick={() => setMenuOpen(false)}>
-            Group Members
+          <a
+            href="#current-research-projects"
+            onClick={() => setMenuOpen(false)}
+          >
+            Research
           </a>
         </li>
         <li>
@@ -41,6 +39,21 @@ const Navbar = () => {
             onClick={() => setMenuOpen(false)}
           >
             Publications
+          </a>
+        </li>
+        <li>
+          <a href="#meet-the-team" onClick={() => setMenuOpen(false)}>
+            Team
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={() => setMenuOpen(false)}>
+            News
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={() => setMenuOpen(false)}>
+            Contact
           </a>
         </li>
       </ul>

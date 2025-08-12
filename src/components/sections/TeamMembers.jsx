@@ -6,7 +6,6 @@ import "../../styles/components/TeamMembers.css";
 const TeamMembers = () => {
   return (
     <section className="team-section-container" id="team-section-container">
-      <h2 className="section-title">Meet the Team</h2>
       <div className="team-grid">
         {teamMembers.map((person) => (
           <Card

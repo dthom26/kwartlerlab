@@ -2,11 +2,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: .5rem;
+    border-bottom: 1px solid black;
+    padding-bottom: .5rem;
+    position: sticky;
+    /* Apply the sticky positioning */
+    top: 0;
+    /* Stick the element to the top of the viewport */
+    z-index: 100;
+    /* Ensure the navbar is above other content */
+    background-color: white;
 
 }
 
 .navbar .logo img {
     height: 50px;
+    border-radius: 50%;
+}
+
+.logo {
+    margin-left: 5rem;
 }
 
 .navbar-toggle {
@@ -21,7 +36,7 @@
 .navbar-toggle .bar {
     width: 25px;
     height: 3px;
-    background: #fff;
+    background: black;
     margin: 4px 0;
     border-radius: 2px;
     transition: 0.3s;
@@ -29,19 +44,21 @@
 
 .navbar-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 3rem;
     list-style: none;
     font-size: 1.02rem;
     margin: 0 auto;
+    margin-right: 5rem;
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .navbar-links {
         display: none;
         position: absolute;
         top: 60px;
         right: 0;
-        background: rgba(0, 116, 217, 0.92);
+        background: lightgrey;
         /* semi-transparent accent blue */
         /* semi-transparent version of #88c5c1 */
         /* You can adjust the alpha (last value) for more/less transparency */

@@ -1,0 +1,17 @@
+#news-title {
+    color: white;
+
+
+
+}
+
+#news {
+    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+    font-weight: lighter;
+    margin: 0;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+
+}

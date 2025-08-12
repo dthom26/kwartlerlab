@@ -11,7 +11,10 @@ function CurrentProjects() {
   }
   return (
     <>
-      <section className="current-projects-section">
+      <section
+        id="current-research-projects"
+        className="current-projects-section"
+      >
         <h2 className="section-title">Current Projects</h2>
         <ul className="projects-grid">
           {currentProjects.map((project, index) => (

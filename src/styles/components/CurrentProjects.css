@@ -178,6 +178,60 @@
     }
 }
 
+/* Medium screens - switch to column layout earlier */
+@media (max-width: 966px) {
+    .projects-grid {
+        flex-direction: column;
+        /* Stack vertically earlier */
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+
+    .projects-grid li {
+        flex: none;
+        /* Reset flex for medium screens */
+        min-width: unset;
+    }
+
+    .projects-grid li.expanded {
+        flex: none;
+        /* Reset flex for medium screens */
+        transform: none;
+    }
+
+    .project-card-container {
+        height: 300px;
+        /* Adjust card height for medium screens */
+    }
+
+    .projects-grid li.expanded .project-card-container {
+        height: auto;
+        /* Dynamic height based on content */
+        min-height: 350px;
+        /* Adjusted height for medium screens */
+        max-height: 450px;
+        /* Set maximum height for medium screens */
+    }
+
+    .project-summary {
+        top: 15%;
+        /* Consistent overlay coverage */
+        bottom: 0;
+        padding: 1rem 0.75rem 1rem;
+        overflow-y: auto;
+        /* Enable scrolling for long content */
+    }
+
+    .project-summary p {
+        font-size: 0.9rem;
+        /* Adjust font size for medium screens */
+        line-height: 1.5;
+        /* Better line spacing */
+        margin-bottom: 0.75rem;
+        /* Space between paragraphs */
+    }
+}
+
 /* Mobile phones - switch to vertical stacking */
 @media (max-width: 600px) {
     .current-projects-section {
