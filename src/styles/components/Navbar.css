@@ -21,7 +21,7 @@
 }
 
 .logo {
-    margin-left: 5rem;
+    margin-left: clamp(8px, 4vw, 40px);
 }
 
 .navbar-toggle {

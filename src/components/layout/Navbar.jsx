@@ -47,12 +47,12 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => setMenuOpen(false)}>
+          <a href="#news" onClick={() => setMenuOpen(false)}>
             News
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => setMenuOpen(false)}>
+          <a href="#footer-container" onClick={() => setMenuOpen(false)}>
             Contact
           </a>
         </li>

@@ -1,0 +1,39 @@
+#lab-photos-wrapper {
+    background-color: #f2f2f2;
+
+}
+
+#lab-photos-section {
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.lab-photo-card {
+    width: 100%;
+    height: clamp(240px, 32vw, 420px);
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+@media (max-width: 768px) {
+    #lab-photos-section {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+
+    }
+
+    .lab-photo-card {
+        height: 300px;
+        object-fit: contain;
+        border-radius: 8px;
+
+
+    }
+}
