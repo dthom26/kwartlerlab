@@ -64,7 +64,7 @@ export const teamMembers = [
   {
     name: "Kennedy Zinn, MS",
     image: "images/team/IMG_1435.png",
-    position: "Data Management Analyst",
+    position: "Biostatistician",
     email: "kennedy.b.zinn@uth.tmc.edu",
     priorDegree: "M.S. in Biostatistics from UTHealth School of Public Health",
     joinedLab: "November 2024",

@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/components/News.css";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const News = () => {
   return (
