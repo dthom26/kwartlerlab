@@ -12,7 +12,7 @@ export const Footer = () => {
           Health Science Center at Houston <br /> Department of Internal
           Medicine | Division of Medical Genetics <br /> 6431 Fannin | MSB 6.104
           | Houston, Tx 77030
-          <br /> Phone 713-500-6843 | Callie.S.Kwartler@uth.tmc.edu email
+          <br /> 713-500-6843 | Callie.S.Kwartler@uth.tmc.edu
         </p>
       </section>
     </div>
