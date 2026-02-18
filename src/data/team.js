@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     name: "Jose “Emi” Esparza Pinelo",
     image: "images/team/Emi.jpeg",
-    position: "Research Technician",
+    position: "PhD Student",
     email: "jose.e.esparzapinelo@uth.tmc.edu",
     priorDegree: "B.S. from University of Houston",
     joinedLab: "September 2022",
@@ -43,8 +43,8 @@ export const teamMembers = [
   {
     name: "Yu-Kuan Pan",
     image: "images/team/Andy.jpg",
-    position: "MS Research Assistant",
-    email: "",
+    position: "Data Management Analyst",
+    email: "Yukuan.Pan@uth.tmc.edu",
     priorDegree: "B.S. from University of Maryland ",
     joinedLab: " August 2024",
     primaryProject:
@@ -89,12 +89,16 @@ export const teamMembers = [
     priorDegree: "M.S. from Georgia State University",
     joinedLab: "January 2025",
     primaryProject:
-      "Aminat works jointly with the Kwartler Lab and other groups in the Division of Medical Genetics. She is responsible for the management of the mouse colony, and she is also studying whether the transcription factor MNRR1 is involved in the mitochondrial-nuclear link in smooth muscle cells.",
+      "Aminat is currently pursuing a masters in public health and works jointly on investigating the role of SETD5 in smooth muscle cell phenotype.",
   },
   {
     name: "Alexei Robin",
-    image: "",
+    image: "images/team/Alexei.png",
     position: "Research Assistant",
-    email: "",
+    email: "Alexei.M.Robin@uth.tmc.edu",
+    priorDegree: "B.A. in Biology",
+    joinedLab: "July 2025",
+    primaryProject:
+      "Alex is responsible for the management of the mouse colony and studies the molecular links between metabolism, epigenetics, and smooth muscle cell phenotype.",
   },
 ];
