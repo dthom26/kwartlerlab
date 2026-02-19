@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/components/labPhotos.css";
+import "../../styles/components/LabPhotos.css";
 import labPhotos from "../../data/labPhotos";
 const LabPhotos = () => {
   return (
