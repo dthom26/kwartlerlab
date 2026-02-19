@@ -15,13 +15,25 @@ const news = [
     id: "2025-07-15-visiting-finley",
     date: "2025-07-15",
     text: "Best of luck to our visiting student Finley, we’re so glad you joined us this summer!",
-    images: [],
+    images: [
+      {
+        src: "/images/News/visiting-student-finley.jpeg",
+        thumb: "/images/News/visiting-student-finley.jpeg",
+        alt: "Visiting student Finley",
+      },
+    ],
   },
   {
     id: "2025-07-21-jess-mcat",
     date: "2025-07-21",
     text: "Wishing our summer student, Jess, the best of luck this semester and on her upcoming MCAT!",
-    images: [],
+    images: [
+      {
+        src: "/images/News/summer-student-jess.png",
+        thumb: "/images/News/summer-student-jess.png",
+        alt: "Summer student Jess",
+      },
+    ],
   },
   {
     id: "2025-08-14-kiara-f31",
@@ -52,11 +64,11 @@ const news = [
     date: "2025-10-22",
     text: "Congratulations to our PI, Dr. Callie Kwartler on being recognized with the 2025 Springer Junior Investigator Award from NAVBO!",
     images: [
-      // {
-      //   src: "/images/News/Dr-Callie.png",
-      //   thumb: "/images/News/Dr-Callie.png",
-      //   alt: "Dr. Callie Kwartler",
-      // },
+      {
+        src: "/images/News//image.jpeg",
+        thumb: "/images/News//image.jpeg",
+        alt: "Dr. Callie Kwartler",
+      },
     ],
   },
   {

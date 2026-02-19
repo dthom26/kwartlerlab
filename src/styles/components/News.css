@@ -63,7 +63,7 @@
 }
 
 .news-hero {
-  width: 100%;
+  /* width: 100%; */
   max-width: 720px;
   margin: 0 auto;
   height: min(320px, 36vh);
@@ -163,6 +163,34 @@
   padding: 0.75rem 0 1.25rem 0;
   width: 100%;
   max-width: 900px;
+}
+
+.news-controls {
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.news-follow {
+  color: var(--news-accent);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+}
+
+.news-follow:focus,
+.news-follow:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .news-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .news-follow {
+    padding: 0;
+  }
 }
 
 .news-button {

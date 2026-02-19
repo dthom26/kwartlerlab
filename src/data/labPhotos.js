@@ -29,6 +29,16 @@ const labPhotos = [
     title: "Lab Photo 6",
     imageUrl: "images/labPhotos/lab_photo_6.png",
   },
+  {
+    id: 7,
+    title: "Lab Photo 7",
+    imageUrl: "images/labPhotos/lab_photo_7.jpeg",
+  },
+  {
+    id: 8,
+    title: "Lab Photo 8",
+    imageUrl: "images/labPhotos/lab_photo_8.jpeg",
+  }
 ];
 
 export default labPhotos;

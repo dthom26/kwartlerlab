@@ -39,13 +39,20 @@ const News = () => {
     <section id="news" aria-labelledby="news-title">
       <h2 id="news-title">News Update</h2>
       <div
-        className={`news-list revealed ${visible > INITIAL ? 'expanded' : ''}`}
+        className={`news-list revealed ${visible > INITIAL ? "expanded" : ""}`}
         id="news-list"
         ref={listRef}
         aria-live="polite"
       >
         {sorted.slice(0, visible).map((n, i) => (
-          <NewsItem key={n.id} index={i} date={n.date} text={n.text} images={n.images} compact />
+          <NewsItem
+            key={n.id}
+            index={i}
+            date={n.date}
+            text={n.text}
+            images={n.images}
+            compact
+          />
         ))}
       </div>
 
@@ -69,6 +76,16 @@ const News = () => {
             Show less
           </button>
         )}
+
+        <a
+          className="news-follow"
+          href="https://x.com/kwartlerlab"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Follow kwartlerlab on X"
+        >
+          Follow us on X
+        </a>
       </div>
     </section>
   );
