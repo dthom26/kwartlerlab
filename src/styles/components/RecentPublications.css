@@ -1,178 +1,212 @@
 .publications-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding: 0 30px;
-    row-gap: 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0 30px;
+  row-gap: 30px;
 }
 
 .publication-card {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    min-width: 0;
-    overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .publications-container li:last-child {
-    margin-bottom: 100px;
+  margin-bottom: 12px;
 }
 
 .card-content {
-    display: flex;
-    flex-direction: row;
-    column-gap: 20px;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  align-items: flex-start;
 }
 
 .card-image-container {
-    flex: 0 0 300px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 6px;
-    min-width: 0;
+  flex: 0 0 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 6px;
+  min-width: 0;
 }
 
 .card-image-publication {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-text {
-    font-size: 1.2rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  font-size: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-title {
-    margin: 0 0 20px 0;
-    font-size: 1.4rem;
-    line-height: 1.3;
+  margin: 0 0 20px 0;
+  font-size: 1.4rem;
+  line-height: 1.3;
 }
 
 .card-summary {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.7;
-    margin: 0;
-    flex: 1;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
 }
 
 .card-button {
-    margin-top: 20px;
-    align-self: center;
-    padding: 8px 16px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-decoration: none;
-    color: #333;
-    font-size: 0.9rem;
+  margin-top: 20px;
+  align-self: center;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
 }
 
 .card-button:hover {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 /* Tablet breakpoint */
 @media (max-width: 1050px) {
-    .card-content {
-        flex-direction: column;
-        row-gap: 20px;
-    }
+  .card-content {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 
-    .card-image-container {
-        flex: none;
-        width: 100%;
-        min-height: 200px;
-    }
+  .card-image-container {
+    flex: none;
+    width: 100%;
+    min-height: 200px;
+  }
 }
 
 /* Mobile improvements */
 @media (max-width: 768px) {
-    .publications-container {
-        max-width: 95%;
-        /* More space on mobile */
-        padding: 0 15px;
-        /* Less padding */
-        row-gap: 20px;
-        /* Tighter spacing */
-    }
+  .publications-container {
+    max-width: 95%;
+    /* More space on mobile */
+    padding: 0 15px;
+    /* Less padding */
+    row-gap: 20px;
+    /* Tighter spacing */
+  }
 
-    .publication-card {
-        padding: 15px 20px;
-        /* Less padding */
-    }
+  .publication-card {
+    padding: 15px 20px;
+    /* Less padding */
+  }
 
-    .card-image-container {
-        height: 180px;
-        /* Shorter images save space */
-    }
+  .card-image-container {
+    height: 180px;
+    /* Shorter images save space */
+  }
 
-    .card-text {
-        font-size: 1.1rem;
-        /* Slightly smaller */
-    }
+  .card-text {
+    font-size: 1.1rem;
+    /* Slightly smaller */
+  }
 
-    .card-title {
-        font-size: 1.25rem;
-        /* Smaller titles */
-        margin-bottom: 15px;
-    }
+  .card-title {
+    font-size: 1.25rem;
+    /* Smaller titles */
+    margin-bottom: 15px;
+  }
 
-    .card-summary {
-        font-size: 1rem;
-        /* Smaller text */
-        line-height: 1.6;
-        /* Tighter line height */
-    }
+  .card-summary {
+    font-size: 1rem;
+    /* Smaller text */
+    line-height: 1.6;
+    /* Tighter line height */
+  }
 
-    .card-button {
-        padding: 12px 20px;
-        /* Bigger touch target */
-        font-size: 1rem;
-        /* Easier to read */
-        align-self: stretch;
-        /* Full width button */
-        text-align: center;
-    }
+  .card-button {
+    padding: 12px 20px;
+    /* Bigger touch target */
+    font-size: 1rem;
+    /* Easier to read */
+    align-self: stretch;
+    /* Full width button */
+    text-align: center;
+  }
 }
 
 /* Small mobile phones */
 @media (max-width: 480px) {
-    .publications-container {
-        max-width: 100%;
-        padding: 0 10px;
-    }
+  .publications-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 
-    .publication-card {
-        padding: 12px 15px;
-    }
+  .publication-card {
+    padding: 12px 15px;
+  }
 
-    .card-image-container {
-        height: 160px;
-        /* Even shorter */
-    }
+  .card-image-container {
+    height: 160px;
+    /* Even shorter */
+  }
 
-    .card-title {
-        font-size: 1.2rem;
-    }
+  .card-title {
+    font-size: 1.2rem;
+  }
 
-    .card-summary {
-        font-size: 0.95rem;
-    }
+  .card-summary {
+    font-size: 0.95rem;
+  }
 
-    .publications-container li:last-child {
-        margin-bottom: 50px;
-        /* Less bottom space */
-    }
+  .publications-container li:last-child {
+    margin-bottom: 12px;
+    /* Less bottom space */
+  }
+}
+
+/* PubMed link styles (global) */
+.recent-publications-footer {
+  max-width: 80%;
+  margin: 0px auto 0px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pubmed-link {
+  color: #0b5fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 4px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(11, 95, 255, 0.12);
+}
+
+.pubmed-link:hover {
+  background: rgba(11, 95, 255, 0.06);
+  text-decoration: none;
+}
+
+.pubmed-link svg {
+  width: 16px;
+  height: 16px;
 }
